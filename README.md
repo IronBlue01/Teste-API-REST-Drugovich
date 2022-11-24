@@ -12,20 +12,30 @@ Versionado neste projeto está a pasta `laradock`, que é uma cópia do projeto 
 4. Ainda dentro da pasta ./laradock abra o terminal e suba os containers nginx, mysql, phpmyadmin
 5. Acesse o container workspace
 6. instale as dependencias do projeto através do composer
-7. Execute as migrations
-8. Gere a documentação
+7. Gere a Key para o arquivo .env
+8. Execute as migrations
+9. Gere a documentação
 
 ```bash
-git clone https://gitlab.com/truckpag/##########.git
-cd nome_projeto
+git clone https://github.com/IronBlue01/Teste-API-REST-Drugovich.git
+cd Teste-API-REST-Drugovich
 cp .env.example .env
 cd ./laradock
 cp .env.example .env
 docker-compose up -d nginx mysql phpmyadmin
 docker-compose exec --user=laradock workspace zsh
 composer install
+php artisan key:generate
 php artisan scribe:generate
 ```
+
+#### Gerar documentação
+```php
+php artisan scribe:generate
+```
+
+#### Acessar documentação
+`<host>/docs`
 
 # Gerando as collections para utilizar no postman
 Dentro da documentação do projeto é possivel importar as collections com os endpoints para uso em ferramentas como postman clicando no link que se encontra no menu lateral esquerdo na parte inferior [View Postman Collection]
@@ -38,10 +48,4 @@ Content-type: application/json
 Accept: application/json
 ```
 
-#### Gerar documentação
-```php
-php artisan scribe:generate
-```
 
-#### Acessar documentação
-`<host>/docs`
