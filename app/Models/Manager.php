@@ -12,6 +12,7 @@ class Manager extends Model
     use HasFactory, SoftDeletes;
 
     protected $table = 'manager';
+    
     protected $fillable = [
         'name',
         'email',

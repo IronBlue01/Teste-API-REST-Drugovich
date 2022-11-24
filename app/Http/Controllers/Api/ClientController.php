@@ -26,24 +26,6 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $managers = [
-            'manager_1' => [
-                'name' => 'Carlos Henrique',
-                'email' => 'carlos@gmail.com',
-                'level' => 1 
-            ],
-            'manager_2' => [
-                'name' => 'Fabio Lima',
-                'email' => 'fabio@gmail.com',
-                'level' => 2 
-            ],
-        ];
-
-        foreach($managers as $m){
-            dd($m['name']);
-        }
-
-
         return ClientResource::collection($this->clientService->list());
     }
 
