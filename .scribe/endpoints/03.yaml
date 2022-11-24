@@ -1,0 +1,282 @@
+name: Grupos
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/group
+    metadata:
+      groupName: Grupos
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Listar Grupos'
+      description: 'Lista todos grupos cadastrados'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+              "data": [
+                  {
+                      "nome": "TransIguaçu",
+                      "data_criacao": "2022-11-23"
+                  },
+                  {
+                      "nome": "TransIguaçu",
+                      "data_criacao": "2022-11-24"
+                  },
+                  {
+                      "nome": "TransNorte",
+                      "data_criacao": "2022-11-24"
+                  },
+                  {
+                      "nome": "AgroFort",
+                      "data_criacao": "2022-11-24"
+                  }
+              ]
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer vkagc3a86f5DeP4hbE1Z6Vd'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/group
+    metadata:
+      groupName: Grupos
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Cadastrar Grupo'
+      description: 'Efetua o cadastro de um novo grupo'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
+        required: true
+        example: lizyrtncesrfsoigngacp
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: lizyrtncesrfsoigngacp
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+              "data": {
+                  "nome": "AgroFort",
+                  "data_criacao": "2022-11-24"
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer gvd486fkbEc5h6Z3PeDaV1a'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/group/{id}'
+    metadata:
+      groupName: Grupos
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Detalhar Grupo'
+      description: 'Detalha os dados de um grupo'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the group.'
+        required: true
+        example: 2
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+              "data": {
+                  "nome": "AgroFort",
+                  "data_criacao": "2022-11-24"
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer bVfk4eE5D1d8haZgP6c3va6'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/group/{id}'
+    metadata:
+      groupName: Grupos
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Atualiza Grupo'
+      description: 'Atualiza  os dados de um grupo'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the group.'
+        required: true
+        example: 2
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: est
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: est
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+              "data": {
+                  "nome": "AgroFort",
+                  "data_criacao": "2022-11-24"
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer vf3e5661E8kVadDcbgZhPa4'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/group/{id}'
+    metadata:
+      groupName: Grupos
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remover um Grupo'
+      description: 'Efetua a remoção de um grupo'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the group.'
+        required: true
+        example: 2
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 2
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 204
+        content: '{}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer dDfaV3a586164hZvEbckgPe'
+    controller: null
+    method: null
+    route: null
+    custom: []

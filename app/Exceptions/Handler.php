@@ -1,0 +1,73 @@
+<?php
+
+namespace App\Exceptions;
+
+use Illuminate\Database\QueryException;
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Throwable;
+
+class Handler extends ExceptionHandler
+{
+    /**
+     * A list of exception types with their corresponding custom log levels.
+     *
+     * @var array<class-string<\Throwable>, \Psr\Log\LogLevel::*>
+     */
+    protected $levels = [
+        //
+    ];
+
+    /**
+     * A list of the exception types that are not reported.
+     *
+     * @var array<int, class-string<\Throwable>>
+     */
+    protected $dontReport = [
+        //
+    ];
+
+    /**
+     * A list of the inputs that are never flashed to the session on validation exceptions.
+     *
+     * @var array<int, string>
+     */
+    protected $dontFlash = [
+        'current_password',
+        'password',
+        'password_confirmation',
+    ];
+
+    /**
+     * Register the exception handling callbacks for the application.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->reportable(function (Throwable $e) {
+            //
+        });
+
+        $this->renderable(function(NotFoundHttpException $e){
+            return response()->json(['message' => 'Rota ou registro não encontrado!!'],404);
+        });
+
+        $this->renderable(function(AccessDeniedHttpException $e){
+            return response()->json(['message' => 'Você não tem permissão de realizar está ação']);
+        });
+
+        
+        $this->renderable(function(MethodNotAllowedHttpException $e){
+            return response()->json(['message' => 'Este verbo não é permitido para está rota, Ou está rota é inesistente']);
+        });
+
+        $this->renderable(function(QueryException $e){
+            if($e->getCode()==23000){
+                return response()->json(['message' => 'Este registro está associado a outro, logo não pode ser excluido']);
+            }
+        });
+    }
+}

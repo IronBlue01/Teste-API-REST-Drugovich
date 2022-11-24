@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "identify": 1,
+            "nome": "fabio",
+            "email": "fabio@gmail.com",
+            "nivel": 2
+        },
+        {
+            "identify": 2,
+            "nome": "carlos",
+            "email": "carlos@gmail.com",
+            "nivel": 1
+        },
+        {
+            "identify": 3,
+            "nome": "Marcio",
+            "email": "marcio@gmail.com",
+            "nivel": 1
+        },
+        {
+            "identify": 4,
+            "nome": "Marlon",
+            "email": "marlon@gmail.com",
+            "nivel": 1
+        },
+        {
+            "identify": 5,
+            "nome": "JOSÉ DA SILVA",
+            "email": "jose.silva@drugovich.com",
+            "nivel": 1
+        }
+    ]
+}
