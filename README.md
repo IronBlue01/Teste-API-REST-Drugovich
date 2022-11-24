@@ -15,6 +15,7 @@ Versionado neste projeto está a pasta `laradock`, que é uma cópia do projeto 
 7. Gere a Key para o arquivo .env
 8. Execute as migrations
 9. Gere a documentação
+10.Executar Seeder para realizar testes manuais no postman
 
 ```bash
 git clone https://github.com/IronBlue01/Teste-API-REST-Drugovich.git
@@ -27,6 +28,7 @@ docker-compose exec --user=laradock workspace zsh
 composer install
 php artisan key:generate
 php artisan scribe:generate
+php artisan db:seed --class=UserTestSeeder
 ```
 
 #### Gerar documentação
