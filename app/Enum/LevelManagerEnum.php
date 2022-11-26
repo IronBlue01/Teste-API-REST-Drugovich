@@ -2,7 +2,7 @@
 
 namespace App\Enum;
 
-enum LevelManagerEnum: int
+enum LevelManagerEnum: int implements TipoInterface
 {   
     case GERENTE_FINANCEIRO = 1;
     case GERENTE_GERAL      = 2;
