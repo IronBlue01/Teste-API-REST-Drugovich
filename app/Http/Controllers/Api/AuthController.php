@@ -7,14 +7,20 @@ use App\Http\Requests\LoginUserRequest;
 use App\Http\Requests\RegisterUserRequest;
 use App\Http\Resources\ManagerResource;
 use App\Models\Manager;
-use App\Traits\ApiResponser;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Services\AuthService;
 use Illuminate\Support\Facades\Auth;
+use App\Traits\ApiResponser;
 
 class AuthController extends Controller
 {
     use ApiResponser;
+
+    public function __construct(
+        public readonly AuthService $authService,
+    ) {
+    }
 
     /**
      * Registra um novo Gerente
@@ -25,18 +31,11 @@ class AuthController extends Controller
      */
     public function register(RegisterUserRequest $request)
     {
-        $manager = Manager::create($request->validated());
-
-        $user = User::create([
-            'name' => $request['name'],
-            'manager_id' => $manager->id,
-            'password' => bcrypt($request['password']),
-            'email' => $request['email']
-        ]);
+        $auth = $this->authService->register($request->validated());
 
         return $this->success([
-            'user' => $user,
-            'token' => $user->createToken('API Token')->plainTextToken
+            'user'  => $auth['user'],
+            'token' => $auth['token']
         ]);
     }
 

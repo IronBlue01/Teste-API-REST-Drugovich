@@ -6,11 +6,13 @@ use App\Repositories\Contracts\{
     ClientRepositoryInterface,
     GroupRepositoryInterface,
     ManagerRepositoryInterface,
+    UserRepositoryInterface
 };
 use App\Repositories\Core\Eloquent\{
     EloquentClientRepository,
     EloquentGroupRepository,
     EloquentManagerRepository,
+    EloquentUserRepository
 };
 use Illuminate\Support\ServiceProvider;
 
@@ -31,6 +33,11 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             ManagerRepositoryInterface::class,
             EloquentManagerRepository::class
+        );
+
+        $this->app->bind(
+            UserRepositoryInterface::class,
+            EloquentUserRepository::class
         );
     }
 
