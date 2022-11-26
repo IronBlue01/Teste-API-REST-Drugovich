@@ -21,18 +21,18 @@ class GroupService
         return $this->groupRepository->store($data);
     }
 
-    public function getGroup(int $id)
+    public function getGroup(int $groupId)
     {
-        return $this->groupRepository->findById($id);
+        return $this->groupRepository->findById($groupId);
     }
 
-    public function updateGroup(int $id, array $data)
+    public function updateGroup(int $groupId, array $data)
     {
-        return $this->groupRepository->update($id, $data);
+        return $this->groupRepository->update($groupId, $data);
     }
 
-    public function deleteGroup(int $id)
+    public function deleteGroup(int $groupId)
     {
-        return $this->groupRepository->delete($id);
+        return $this->groupRepository->delete($groupId);
     }
 }

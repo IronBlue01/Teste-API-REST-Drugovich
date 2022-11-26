@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
 class GroupController extends Controller
 {
     public function __construct(
-        protected readonly GroupService $groupService
+        protected readonly GroupService $groupService,
     ) {}
 
     /**

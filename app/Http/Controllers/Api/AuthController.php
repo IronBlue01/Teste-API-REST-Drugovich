@@ -58,7 +58,6 @@ class AuthController extends Controller
             'message' => 'success',
             'token' => auth()->user()->createToken('API Token')->plainTextToken
         ],201);
-
     }
 
     /**
@@ -68,9 +67,9 @@ class AuthController extends Controller
      * @group Auth
      * @responseFile Response/auth/Detalhar.json
      */
-    public function me()
+    public function userAuthenticated()
     {
-        return ManagerResource::make(auth()->user());
+       return ManagerResource::make(auth()->user());
     }
 
     /**
@@ -84,8 +83,6 @@ class AuthController extends Controller
     {
         auth()->user()->tokens()->delete();
 
-        return [
-            'message' => 'Token Removido'
-        ];
+        return response()->json(['message' => 'Token Removido']);
     }
 }

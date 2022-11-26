@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 class ClientController extends Controller
 {
     public function __construct(
-        protected readonly ClientService $clientService
+        protected readonly ClientService $clientService,
     ) {}
 
     /**
