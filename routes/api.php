@@ -6,7 +6,6 @@ use App\Http\Controllers\Api\{
     ManagerController
 };
 
-
 Route::post('/auth/register', [AuthController::class, 'register']);
 
 Route::post('/auth/login', [AuthController::class, 'login']);

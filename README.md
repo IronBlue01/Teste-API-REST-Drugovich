@@ -5,7 +5,7 @@ Versionado neste projeto está a pasta `laradock`, que é uma cópia do projeto 
 
 É necessário ter o `docker` e o `docker-compose` instalados. Lembre-se de parar seu servidor web caso exista.
 
-#### Clonando e Instalando Projeto
+#### Clonando e Instalando o Projeto
 1. Faça um clone deste projeto
 2. Dentro da raiz do projeto crie uma copia de .env.example para .env.
 3. Acesse a pasta ./laradock que se encontra na raiz do projeto e crie uma copia de .env.example para .env, o arquivo já está devidamente configurado, porém no inicio do arquivo você pode mudar as portas que serão utilizadas pelos containers caso acorra algum conflito em sua maquina
@@ -43,7 +43,7 @@ php artisan scribe:generate
 Dentro da documentação do projeto é possivel importar as collections com os endpoints para uso em ferramentas como postman clicando no link que se encontra no menu lateral esquerdo na parte inferior [View Postman Collection]
 
 ### Cabeçalho para executar requisições
-Este cabeçalho garante que a resposta seja devolvida em JSON. Não informá-lo na requisição pode causar comportamentes
+Este cabeçalho garante que a resposta seja devolvida em JSON. Não informá-lo na requisição pode causar comportamentos
 inesperados na API.
 ```
 Content-type: application/json
