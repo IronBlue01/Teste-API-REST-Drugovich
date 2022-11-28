@@ -78,8 +78,9 @@ class GroupController extends Controller
      * @authenticated
      * @response 204
      */
-    public function destroy(validateManagerRequest $request, Group $group)
+    public function destroy(Group $group)
     {   
+        $this->authorize('accept-manager-admin');
         $this->groupService->deleteGroup($group->id);
         return response()->noContent(Response::HTTP_NO_CONTENT);
     }

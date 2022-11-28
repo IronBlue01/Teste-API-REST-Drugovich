@@ -3,14 +3,14 @@
 namespace App\Http\Requests;
 
 use App\Models\Manager;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreGroupRequest extends FormRequest
 {
     public function authorize()
     {
-        $manager = new Manager;
-        return $manager->managerIsAdmin();
+        return Gate::allows('accept-manager-admin');
     }
 
     public function rules()

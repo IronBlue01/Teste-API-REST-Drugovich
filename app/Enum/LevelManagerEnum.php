@@ -16,4 +16,9 @@ enum LevelManagerEnum: int implements TipoInterface
             self::GERENTE_ADMINISTRATIVO => 3
         };
     }
+
+    public function descricao(): string
+    {
+        //...        
+    }
 }
