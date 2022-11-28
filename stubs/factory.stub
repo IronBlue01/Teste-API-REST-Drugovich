@@ -1,15 +1,15 @@
 <?php
 
-namespace Database\Factories;
+namespace {{ factoryNamespace }};
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class GroupFactory extends Factory
+class {{ factory }}Factory extends Factory
 {
     public function definition()
     {
         return [
-            'name' => fake()->name()
+            //
         ];
     }
 }
