@@ -26,7 +26,7 @@
             </style>
 
     <script>
-        var baseUrl = "http://localhost:8003";
+        var baseUrl = "http://localhost:5000";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -160,7 +160,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: November 24, 2022</li>
+        <li>Last updated: November 30, 2022</li>
     </ul>
 </div>
 
@@ -169,14 +169,14 @@
     <div class="content">
         <h1 id="introduction">Introduction</h1>
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost:8003</code>
+    <strong>Base URL</strong>: <code>http://localhost:5000</code>
 </aside>
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
 You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
@@ -197,7 +197,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8003/api/auth/register" \
+    "http://localhost:5000/api/auth/register" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -212,7 +212,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/auth/register"
+    "http://localhost:5000/api/auth/register"
 );
 
 const headers = {
@@ -391,19 +391,19 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8003/api/auth/login" \
+    "http://localhost:5000/api/auth/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"stanton.anastacio@example.com\",
-    \"password\": \"mKk.H\\\\:8H0jqOeXjt\"
+    \"email\": \"marquise.gusikowski@example.com\",
+    \"password\": \"4m28xcc\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/auth/login"
+    "http://localhost:5000/api/auth/login"
 );
 
 const headers = {
@@ -412,8 +412,8 @@ const headers = {
 };
 
 let body = {
-    "email": "stanton.anastacio@example.com",
-    "password": "mKk.H\\:8H0jqOeXjt"
+    "email": "marquise.gusikowski@example.com",
+    "password": "4m28xcc"
 };
 
 fetch(url, {
@@ -504,10 +504,10 @@ fetch(url, {
  &nbsp;
                 <input type="text"
                name="email"                data-endpoint="POSTapi-auth-login"
-               value="stanton.anastacio@example.com"
+               value="marquise.gusikowski@example.com"
                data-component="body" hidden>
     <br>
-<p>O campo value deve ser um endereço de e-mail válido. Example: <code>stanton.anastacio@example.com</code></p>
+<p>O campo value deve ser um endereço de e-mail válido. Example: <code>marquise.gusikowski@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -515,10 +515,10 @@ fetch(url, {
  &nbsp;
                 <input type="text"
                name="password"                data-endpoint="POSTapi-auth-login"
-               value="mKk.H\:8H0jqOeXjt"
+               value="4m28xcc"
                data-component="body" hidden>
     <br>
-<p>O campo value deve ter pelo menos 6 caracteres. Example: <code>mKk.H\:8H0jqOeXjt</code></p>
+<p>O campo value deve ter pelo menos 6 caracteres. Example: <code>4m28xcc</code></p>
         </div>
         </form>
 
@@ -535,14 +535,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8003/api/me" \
+    --get "http://localhost:5000/api/me" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/me"
+    "http://localhost:5000/api/me"
 );
 
 const headers = {
@@ -649,14 +649,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8003/api/auth/logout" \
+    "http://localhost:5000/api/auth/logout" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/auth/logout"
+    "http://localhost:5000/api/auth/logout"
 );
 
 const headers = {
@@ -763,7 +763,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8003/api/manager" \
+    --get "http://localhost:5000/api/manager" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -771,7 +771,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/manager"
+    "http://localhost:5000/api/manager"
 );
 
 const headers = {
@@ -917,7 +917,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8003/api/manager/1" \
+    --get "http://localhost:5000/api/manager/14" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -925,7 +925,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/manager/1"
+    "http://localhost:5000/api/manager/14"
 );
 
 const headers = {
@@ -1036,10 +1036,10 @@ fetch(url, {
  &nbsp;
                 <input type="number"
                name="id"                data-endpoint="GETapi-manager--id-"
-               value="1"
+               value="14"
                data-component="url" hidden>
     <br>
-<p>The ID of the manager. Example: <code>1</code></p>
+<p>The ID of the manager. Example: <code>14</code></p>
             </div>
                     </form>
 
@@ -1057,15 +1057,20 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8003/api/manager/1" \
+    "http://localhost:5000/api/manager/5" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"hhbpgnbp\",
+    \"level\": 14
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/manager/1"
+    "http://localhost:5000/api/manager/5"
 );
 
 const headers = {
@@ -1074,9 +1079,15 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "name": "hhbpgnbp",
+    "level": 14
+};
+
 fetch(url, {
     method: "PUT",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -1180,12 +1191,35 @@ fetch(url, {
  &nbsp;
                 <input type="number"
                name="id"                data-endpoint="PUTapi-manager--id-"
-               value="1"
+               value="5"
                data-component="url" hidden>
     <br>
-<p>The ID of the manager. Example: <code>1</code></p>
+<p>The ID of the manager. Example: <code>5</code></p>
             </div>
-                    </form>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text"
+               name="name"                data-endpoint="PUTapi-manager--id-"
+               value="hhbpgnbp"
+               data-component="body" hidden>
+    <br>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 100 caracteres. Example: <code>hhbpgnbp</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>level</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number"
+               name="level"                data-endpoint="PUTapi-manager--id-"
+               value="14"
+               data-component="body" hidden>
+    <br>
+<p>Example: <code>14</code></p>
+        </div>
+        </form>
 
                     <h2 id="gerentes-DELETEapi-manager--id-">Remover um Gerente</h2>
 
@@ -1201,7 +1235,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8003/api/manager/1" \
+    "http://localhost:5000/api/manager/9" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1209,7 +1243,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/manager/1"
+    "http://localhost:5000/api/manager/9"
 );
 
 const headers = {
@@ -1312,10 +1346,10 @@ fetch(url, {
  &nbsp;
                 <input type="number"
                name="id"                data-endpoint="DELETEapi-manager--id-"
-               value="1"
+               value="9"
                data-component="url" hidden>
     <br>
-<p>The ID of the manager. Example: <code>1</code></p>
+<p>The ID of the manager. Example: <code>9</code></p>
             </div>
                     </form>
 
@@ -1333,7 +1367,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8003/api/manager/insert-client-group" \
+    "http://localhost:5000/api/manager/insert-client-group" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -1346,7 +1380,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/manager/insert-client-group"
+    "http://localhost:5000/api/manager/insert-client-group"
 );
 
 const headers = {
@@ -1374,7 +1408,7 @@ fetch(url, {
         </blockquote>
                 <pre>
 
-<code class="language-json" style="max-height: 300px;">Response/gerentes/</code>
+<code class="language-json" style="max-height: 300px;">Response/gerentes/InsereClienteGrupo.json</code>
  </pre>
     </span>
 <span id="execution-results-POSTapi-manager-insert-client-group" hidden>
@@ -1492,7 +1526,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8003/api/client" \
+    --get "http://localhost:5000/api/client" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1500,7 +1534,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/client"
+    "http://localhost:5000/api/client"
 );
 
 const headers = {
@@ -1640,7 +1674,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8003/api/client" \
+    "http://localhost:5000/api/client" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -1653,7 +1687,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/client"
+    "http://localhost:5000/api/client"
 );
 
 const headers = {
@@ -1802,7 +1836,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8003/api/client/6" \
+    --get "http://localhost:5000/api/client/4" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1810,7 +1844,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/client/6"
+    "http://localhost:5000/api/client/4"
 );
 
 const headers = {
@@ -1921,10 +1955,10 @@ fetch(url, {
  &nbsp;
                 <input type="number"
                name="id"                data-endpoint="GETapi-client--id-"
-               value="6"
+               value="4"
                data-component="url" hidden>
     <br>
-<p>The ID of the client. Example: <code>6</code></p>
+<p>The ID of the client. Example: <code>4</code></p>
             </div>
                     </form>
 
@@ -1942,19 +1976,19 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8003/api/client/6" \
+    "http://localhost:5000/api/client/8" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"yqkojpabjdrtxjgf\"
+    \"name\": \"xziuqhkqhrcuj\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/client/6"
+    "http://localhost:5000/api/client/8"
 );
 
 const headers = {
@@ -1964,7 +1998,7 @@ const headers = {
 };
 
 let body = {
-    "name": "yqkojpabjdrtxjgf"
+    "name": "xziuqhkqhrcuj"
 };
 
 fetch(url, {
@@ -2074,10 +2108,10 @@ fetch(url, {
  &nbsp;
                 <input type="number"
                name="id"                data-endpoint="PUTapi-client--id-"
-               value="6"
+               value="8"
                data-component="url" hidden>
     <br>
-<p>The ID of the client. Example: <code>6</code></p>
+<p>The ID of the client. Example: <code>8</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -2086,10 +2120,10 @@ fetch(url, {
 <i>optional</i> &nbsp;
                 <input type="text"
                name="name"                data-endpoint="PUTapi-client--id-"
-               value="yqkojpabjdrtxjgf"
+               value="xziuqhkqhrcuj"
                data-component="body" hidden>
     <br>
-<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 100 caracteres. Example: <code>yqkojpabjdrtxjgf</code></p>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 100 caracteres. Example: <code>xziuqhkqhrcuj</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>cnpj</code></b>&nbsp;&nbsp;
@@ -2118,7 +2152,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8003/api/client/6" \
+    "http://localhost:5000/api/client/15" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2126,7 +2160,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/client/6"
+    "http://localhost:5000/api/client/15"
 );
 
 const headers = {
@@ -2229,10 +2263,10 @@ fetch(url, {
  &nbsp;
                 <input type="number"
                name="id"                data-endpoint="DELETEapi-client--id-"
-               value="6"
+               value="15"
                data-component="url" hidden>
     <br>
-<p>The ID of the client. Example: <code>6</code></p>
+<p>The ID of the client. Example: <code>15</code></p>
             </div>
                     </form>
 
@@ -2254,7 +2288,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8003/api/group" \
+    --get "http://localhost:5000/api/group" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2262,7 +2296,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/group"
+    "http://localhost:5000/api/group"
 );
 
 const headers = {
@@ -2394,19 +2428,19 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8003/api/group" \
+    "http://localhost:5000/api/group" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"lizyrtncesrfsoigngacp\"
+    \"name\": \"k\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/group"
+    "http://localhost:5000/api/group"
 );
 
 const headers = {
@@ -2416,7 +2450,7 @@ const headers = {
 };
 
 let body = {
-    "name": "lizyrtncesrfsoigngacp"
+    "name": "k"
 };
 
 fetch(url, {
@@ -2520,10 +2554,10 @@ fetch(url, {
  &nbsp;
                 <input type="text"
                name="name"                data-endpoint="POSTapi-group"
-               value="lizyrtncesrfsoigngacp"
+               value="k"
                data-component="body" hidden>
     <br>
-<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>lizyrtncesrfsoigngacp</code></p>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>k</code></p>
         </div>
         </form>
 
@@ -2541,7 +2575,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8003/api/group/2" \
+    --get "http://localhost:5000/api/group/6" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2549,7 +2583,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/group/2"
+    "http://localhost:5000/api/group/6"
 );
 
 const headers = {
@@ -2658,10 +2692,10 @@ fetch(url, {
  &nbsp;
                 <input type="number"
                name="id"                data-endpoint="GETapi-group--id-"
-               value="2"
+               value="6"
                data-component="url" hidden>
     <br>
-<p>The ID of the group. Example: <code>2</code></p>
+<p>The ID of the group. Example: <code>6</code></p>
             </div>
                     </form>
 
@@ -2679,19 +2713,19 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8003/api/group/2" \
+    "http://localhost:5000/api/group/10" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"est\"
+    \"name\": \"asperiores\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/group/2"
+    "http://localhost:5000/api/group/10"
 );
 
 const headers = {
@@ -2701,7 +2735,7 @@ const headers = {
 };
 
 let body = {
-    "name": "est"
+    "name": "asperiores"
 };
 
 fetch(url, {
@@ -2809,10 +2843,10 @@ fetch(url, {
  &nbsp;
                 <input type="number"
                name="id"                data-endpoint="PUTapi-group--id-"
-               value="2"
+               value="10"
                data-component="url" hidden>
     <br>
-<p>The ID of the group. Example: <code>2</code></p>
+<p>The ID of the group. Example: <code>10</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -2821,10 +2855,10 @@ fetch(url, {
  &nbsp;
                 <input type="text"
                name="name"                data-endpoint="PUTapi-group--id-"
-               value="est"
+               value="asperiores"
                data-component="body" hidden>
     <br>
-<p>Example: <code>est</code></p>
+<p>Example: <code>asperiores</code></p>
         </div>
         </form>
 
@@ -2842,7 +2876,7 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8003/api/group/2" \
+    "http://localhost:5000/api/group/6" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2850,7 +2884,7 @@ fetch(url, {
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8003/api/group/2"
+    "http://localhost:5000/api/group/6"
 );
 
 const headers = {
@@ -2953,10 +2987,10 @@ fetch(url, {
  &nbsp;
                 <input type="number"
                name="id"                data-endpoint="DELETEapi-group--id-"
-               value="2"
+               value="6"
                data-component="url" hidden>
     <br>
-<p>The ID of the group. Example: <code>2</code></p>
+<p>The ID of the group. Example: <code>6</code></p>
             </div>
                     </form>
 

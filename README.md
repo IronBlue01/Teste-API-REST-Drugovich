@@ -30,6 +30,17 @@ php artisan key:generate
 php artisan scribe:generate
 php artisan db:seed --class=UserTestSeeder
 ```
+#### Criado usuários fakes para testes
+Ao executar o comando [php artisan db:seed --class=UserTestSeeder] serão criados 2 usuários na base de dados para testes, será possível logo de ínicio usar estes dados para efetuar login na API e executar os testes.
+
+Usuario-1 - Gerente de nível 1
+E-mail: carlos@gmail.com
+Senha: 123456
+
+Usuario-2 - Gerente de nível 2
+E-mail: fabio@gmail.com
+Senha: 123456
+
 
 #### Gerar documentação
 ```php

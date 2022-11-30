@@ -58,7 +58,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer vkagc3a86f5DeP4hbE1Z6Vd'
+      - 'Bearer vEha6P4c6g8fb5ZDVekad31'
     controller: null
     method: null
     route: null
@@ -89,11 +89,11 @@ endpoints:
         name: name
         description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
         required: true
-        example: lizyrtncesrfsoigngacp
+        example: k
         type: string
         custom: []
     cleanBodyParameters:
-      name: lizyrtncesrfsoigngacp
+      name: k
     fileParameters: []
     responses:
       -
@@ -112,7 +112,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer gvd486fkbEc5h6Z3PeDaV1a'
+      - 'Bearer fah634EgdkbcZe61P5vD8aV'
     controller: null
     method: null
     route: null
@@ -139,11 +139,11 @@ endpoints:
         name: id
         description: 'The ID of the group.'
         required: true
-        example: 2
+        example: 6
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 2
+      id: 6
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -166,7 +166,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer bVfk4eE5D1d8haZgP6c3va6'
+      - 'Bearer f8VakPeEZ56Ddab4v1g3ch6'
     controller: null
     method: null
     route: null
@@ -194,11 +194,11 @@ endpoints:
         name: id
         description: 'The ID of the group.'
         required: true
-        example: 2
+        example: 10
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 2
+      id: 10
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -206,11 +206,11 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: est
+        example: asperiores
         type: string
         custom: []
     cleanBodyParameters:
-      name: est
+      name: asperiores
     fileParameters: []
     responses:
       -
@@ -229,7 +229,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer vf3e5661E8kVadDcbgZhPa4'
+      - 'Bearer 6Z8EdDbaPe5af631gk4Vhvc'
     controller: null
     method: null
     route: null
@@ -256,11 +256,11 @@ endpoints:
         name: id
         description: 'The ID of the group.'
         required: true
-        example: 2
+        example: 6
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 2
+      id: 6
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -277,7 +277,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer dDfaV3a586164hZvEbckgPe'
+      - 'Bearer c5E6DhVe6g3v418afdbPkZa'
     controller: null
     method: null
     route: null

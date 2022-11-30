@@ -64,7 +64,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer e5a66cd1VZav4Dhg38kEPfb'
+      - 'Bearer 36Vb6Dackv8PfEgh4d5Zea1'
     controller: null
     method: null
     route: null
@@ -128,7 +128,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4VZh3P8cefad5Ea1vbD6gk6'
+      - 'Bearer aa6e4Zb8khE6c5Vfg3v1PDd'
     controller: null
     method: null
     route: null
@@ -155,11 +155,11 @@ endpoints:
         name: id
         description: 'The ID of the client.'
         required: true
-        example: 6
+        example: 4
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 6
+      id: 4
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -184,7 +184,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer agc5e18bh63fkPEVa64DdZv'
+      - 'Bearer kZP3h5Dfce416ag86aVvbEd'
     controller: null
     method: null
     route: null
@@ -212,11 +212,11 @@ endpoints:
         name: id
         description: 'The ID of the client.'
         required: true
-        example: 6
+        example: 8
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 6
+      id: 8
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -224,7 +224,7 @@ endpoints:
         name: name
         description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 100 caracteres.'
         required: false
-        example: yqkojpabjdrtxjgf
+        example: xziuqhkqhrcuj
         type: string
         custom: []
       cnpj:
@@ -235,7 +235,7 @@ endpoints:
         type: string
         custom: []
     cleanBodyParameters:
-      name: yqkojpabjdrtxjgf
+      name: xziuqhkqhrcuj
     fileParameters: []
     responses:
       -
@@ -256,7 +256,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer vdfZ35646DbEaag1P8hVkec'
+      - 'Bearer eZEkg14b5DVaPv3d66h8caf'
     controller: null
     method: null
     route: null
@@ -283,11 +283,11 @@ endpoints:
         name: id
         description: 'The ID of the client.'
         required: true
-        example: 6
+        example: 15
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 6
+      id: 15
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -304,7 +304,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 3PbZ1a66vf5a8dh4EeDkgVc'
+      - 'Bearer 8EgD16ePba463ak5VvcdfhZ'
     controller: null
     method: null
     route: null

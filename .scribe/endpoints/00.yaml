@@ -117,19 +117,19 @@ endpoints:
         name: email
         description: 'O campo value deve ser um endereço de e-mail válido.'
         required: true
-        example: stanton.anastacio@example.com
+        example: marquise.gusikowski@example.com
         type: string
         custom: []
       password:
         name: password
         description: 'O campo value deve ter pelo menos 6 caracteres.'
         required: true
-        example: 'mKk.H\:8H0jqOeXjt'
+        example: 4m28xcc
         type: string
         custom: []
     cleanBodyParameters:
-      email: stanton.anastacio@example.com
-      password: 'mKk.H\:8H0jqOeXjt'
+      email: marquise.gusikowski@example.com
+      password: 4m28xcc
     fileParameters: []
     responses:
       -

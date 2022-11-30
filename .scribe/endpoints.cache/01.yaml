@@ -72,7 +72,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Pg6be36akfE8v415aVdcZDh'
+      - 'Bearer 6h68fb5Ega4aZvk1e3VDcPd'
     controller: null
     method: null
     route: null
@@ -99,11 +99,11 @@ endpoints:
         name: id
         description: 'The ID of the manager.'
         required: true
-        example: 1
+        example: 14
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: 14
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -128,7 +128,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer dfhbav136c6k4PVDE8egaZ5'
+      - 'Bearer EPfDZ86b41adghaevc356Vk'
     controller: null
     method: null
     route: null
@@ -156,15 +156,31 @@ endpoints:
         name: id
         description: 'The ID of the manager.'
         required: true
-        example: 1
+        example: 5
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: 5
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 100 caracteres.'
+        required: false
+        example: hhbpgnbp
+        type: string
+        custom: []
+      level:
+        name: level
+        description: ''
+        required: false
+        example: 14
+        type: integer
+        custom: []
+    cleanBodyParameters:
+      name: hhbpgnbp
+      level: 14
     fileParameters: []
     responses:
       -
@@ -185,7 +201,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer a4P8f5aDb6e1kh3vZ6dgEVc'
+      - 'Bearer e6Zbhgad4kcVvPfa8E6D513'
     controller: null
     method: null
     route: null
@@ -212,11 +228,11 @@ endpoints:
         name: id
         description: 'The ID of the manager.'
         required: true
-        example: 1
+        example: 9
         type: integer
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: 9
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -233,7 +249,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer EVkehaDg6Z56cd4a3vb18fP'
+      - 'Bearer E8g1Z6c4k6PafhD5Vabved3'
     controller: null
     method: null
     route: null
@@ -281,7 +297,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: Response/gerentes/
+        content: Response/gerentes/InsereClienteGrupo.json
         headers: []
         description: ''
         custom: []
@@ -289,7 +305,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6vgVkcfh4bD8d5EPZaea316'
+      - 'Bearer 8g6635Dvbch4faeVEadZPk1'
     controller: null
     method: null
     route: null
